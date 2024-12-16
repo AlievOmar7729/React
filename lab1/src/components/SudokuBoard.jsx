@@ -1,25 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Cell from './Cell.jsx';
 
-class SudokuBoard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            board: Array.from({ length: props.size }, () => Array(props.size).fill(''))
-        };
-    }
+const SudokuBoard = ({size}) => {
+        const [board,setBoard] = useState(
+            Array.from({length:size}, () => Array(size).fill(''))
+        );
+        const handleCellClick = (row,col,value) =>{
+            const newBoard = [...board];
+            newBoard[row][col] = value;
+            setBoard(newBoard);
+        }
 
-    handleCellClick = (row, col, value) => {
-        const newBoard = this.state.board.slice();
-        newBoard[row][col] = value;
-        this.setState({ board: newBoard });
-    }
-
-    render() {
         return (
             <table style={{ borderCollapse: 'collapse' }}>
                 <tbody>
-                {this.state.board.map((row, rowIndex) => (
+                {board.map((row, rowIndex) => (
                     <tr key={rowIndex}>
                         {row.map((cellValue, colIndex) => (
                             <Cell
@@ -27,7 +22,7 @@ class SudokuBoard extends React.Component {
                                 value={cellValue}
                                 row={rowIndex}
                                 col={colIndex}
-                                onCellClick={this.handleCellClick}
+                                onCellClick={handleCellClick}
                             />
                         ))}
                     </tr>
@@ -35,7 +30,6 @@ class SudokuBoard extends React.Component {
                 </tbody>
             </table>
         );
-    }
 }
 
 export default SudokuBoard;
