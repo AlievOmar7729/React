@@ -1,0 +1,10 @@
+#volume {
+    width: 60px;
+    height: 20px;
+}
+
+#button-pause{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
