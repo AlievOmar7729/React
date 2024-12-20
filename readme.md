@@ -1,7 +1,7 @@
 ## Компонентно-орієнтоване програмування (2024-2025)
 
 #### Л.Р 1 - Компоненти = https://github.com/AlievOmar7729/React/tree/components
-#### Л.Р 2 - Hooks = ❌
+#### Л.Р 2 - Hooks = https://github.com/AlievOmar7729/React/tree/hooks
 #### Л.Р 3 - Форма = ❌
 #### Л.Р 4 - Роутинг = ❌
 #### Л.Р 5 - Менеджмент стану = ❌
