@@ -1,0 +1,21 @@
+.tab-group {
+    display: flex;
+    border-bottom: 2px solid ghostwhite;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+    color: blue;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
