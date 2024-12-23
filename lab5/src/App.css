@@ -1,0 +1,58 @@
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-list {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cart {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product-item, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.product-item .product-name {
+    flex: 2;
+    font-weight: bold;
+}
+
+.product-item .product-price {
+    flex: 1;
+}
+
+.product-item .product-action {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
